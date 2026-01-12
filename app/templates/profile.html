@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ user['firstname'] }} {{ user['lastname'] }}{% endblock title %}
+
+{% block user_nav %}active{% endblock user_nav%}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>This page is public on purpose</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col>
+            <div class=" card" style="width:20rem;margin:20px 0 24px 0">
+            <img class="card-img-top" src="https://www.w3schools.com/bootstrap5/img_avatar3.png" alt="image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">{{ user['firstname'] }} {{ user['lastname'] }}</h4>
+                <p class="card-text">Some example text some example text. {{ user['firstname'] }} {{ user['lastname'] }} is an architect and engineer.
+                    URL: {{ user['url'] }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

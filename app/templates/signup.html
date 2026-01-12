@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock title %}
+
+{% block content %}
+<div class="container mt-3 mb-3">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="card auth-card">
+                <h3 class="card-header">Sign Up</h3>
+                <div class="card-body">
+                    <form class="row justify-content-center" method="post">
+                        {{ form.csrf_token() }}
+                        <div class="row mt-3">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-3">
+                                <label for="firstname" class="form-label">Firstname</label>
+                                {{ form.firstname(class="form-control", placeholder="i.e. John", value="One") }}
+                                {% if form.firstname.errors %}
+                                {% for error in form.firstname.errors %}
+                                <small class="text-danger">{{ error }}</small>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-3">
+                                <label for="lastname" class="form-label">Lastname</label>
+                                {{ form.lastname(class="form-control", placeholder="i.e. Doe", value="Test") }}
+                                {% if form.lastname.errors %}
+                                {% for error in form.lastname.errors %}
+                                <small class="text-danger">{{ error }}</small>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="email" class="form-label">Email Address</label>
+                                {{ form.email(class="form-control", placeholder="i.e. email@email.com",
+                                value="one@email.com") }}
+                                {% if form.email.errors %}
+                                {% for error in form.email.errors %}
+                                <small class="text-danger">{{ error }}</small>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                {{ form.password(class="form-control", placeholder="********") }}
+                                {% if form.password.errors %}
+                                {% for error in form.password.errors %}
+                                <small class="text-danger">{{ error }}</small>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-3">
+                                <label for="repeat" class="form-label">Repeat Password</label>
+                                {{ form.repeat(class="form-control", placeholder="********") }}
+                                {% if form.repeat.errors %}
+                                {% for error in form.repeat.errors %}
+                                <small class="text-danger">{{ error }}</small>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col text-center">
+                                <p>By clicking "Submit", you are agreeing to the <a href="#" style="text-decoration: none;">Privacy</a> and <a href="#" style="text-decoration: none;">Terms</a></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex justify-content-end">
+                                {{ form.submit(class="btn btn-warning") }}
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col text-center">
+                    <p>Already have an account? Login <a href="{{ url_for('auth_bp.login') }}">here</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock content %}

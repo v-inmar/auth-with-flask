@@ -1,0 +1,40 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Flask instance folder (if used for configs)
+instance/
+*.env
+*.flaskenv
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Pytest / coverage
+.coverage
+htmlcov/
+*.pytest_cache/
+*.tox/
+
+# Migrations (optional: include if you want to keep them in Git)
+migrations/
+
+
+logs/

@@ -1,0 +1,31 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Migrations - run migration inside docker
+migrations/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Git
+.git/
+.gitignore
+
+# Docker-related
+docker-compose.override.yml
+
+# Local configs
+*.env
+*.flaskenv
+instance/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+
+logs/

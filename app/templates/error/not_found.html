@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}404 - Not Found{% endblock title %}
+
+{% block home_nav %}active{% endblock home_nav%}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body bg-danger">
+                    <h5 class="card-title">Not Found: 404</h5>
+                    <p class="card-text">The HTTP 404 Not Found client error response status code indicates that the server cannot find the requested resource. 
+                        Links that lead to a 404 page are often called broken or dead links and can be subject to link rot</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,39 @@
+services:
+  app:
+    build: .
+    container_name: auth-with-flask
+    ports:
+      - "5000:5000"
+    environment:
+      DB_URI: mysql+pymysql://devuser:devuser@db:3306/appdb
+      SECRET_KEY: changemeonprod
+    depends_on:
+      - db
+    networks:
+      - auth_with_flask_network
+
+  db:
+    image: mysql:8.4
+    container_name: auth-with-flask-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: devuser
+      MYSQL_PASSWORD: devuser
+    networks:
+      - auth_with_flask_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      retries: 5
+
+networks:
+  auth_with_flask_network:
+    driver: bridge
+
+
+# No volumes, since i want it to delete everything when the containers stop
+# all necessary environments are included in this docker-compose
+# no port exposed for db since it wont be access by host
+
+

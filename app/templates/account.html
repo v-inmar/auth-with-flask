@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}Account{% endblock title %}
+
+{% block user_nav %}active{% endblock user_nav%}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>Account</h4>
+        </div>
+    </div>
+    <hr>
+    <div class="row mb-4">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Email Address
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ email }}</h5>
+                    <p class="card-text">Update your email address.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dummyModal">Edit Email
+                        Address</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Password
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">********</h5>
+                    <p class="card-text">Update your current password.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dummyModal">Edit Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Deactivate Account
+                </div>
+                <div class="card-body">
+                    <p class="card-text">You can deactivate your account here.</p>
+                    <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#dummyModal">Deactivate Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Logout on all devices
+                </div>
+                <div class="card-body">
+                    <p class="card-text">This will logout all devices that are used for this account</p>
+                    <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#dummyModal">Logout All Devices</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="dummyModal" tabindex="-1" aria-labelledby="dummyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="dummyModalLabel">Dummy Link</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>This is just for show. In real application, it should navigate to the page</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

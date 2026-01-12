@@ -1,0 +1,5 @@
+SECRET_KEY=changemeonprod
+DB_URI=mysql+pymysql://devuser:devuser@localhost:3306/appdb
+
+HOST=0.0.0.0
+PORT=5000

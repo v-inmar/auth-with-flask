@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}400 - Bad Request{% endblock title %}
+
+{% block home_nav %}active{% endblock home_nav%}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body bg-danger">
+                    <h5 class="card-title">Bad Request: 400</h5>
+                    <p class="card-text">The HTTP 400 Bad Request client error response status code indicates that the server would not process the request due to something the server considered to be a client error. 
+                        The reason for a 400 response is typically due to malformed request syntax, invalid request message framing, or deceptive request routing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
