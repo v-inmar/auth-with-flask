@@ -30,7 +30,7 @@ The project includes a **Docker Compose** setup to quickly run the entire applic
 1. Clone the repository:  
    ```bash
    git clone https://github.com/v-inmar/auth-with-flask.git
-   cd <your-repo-directory>
+   cd auth-with-flask
    ```
 
 ## Running with Docker Compose
