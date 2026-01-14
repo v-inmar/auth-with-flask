@@ -31,6 +31,11 @@ The project includes a **Docker Compose** setup to quickly run the entire applic
    ```bash
    git clone https://github.com/v-inmar/auth-with-flask.git
    cd auth-with-flask
+
+   or
+
+   git clone https://github.com/v-inmar/auth-with-flask.git mydirectory
+   cd mydirectory
    ```
 
 ## Running with Docker Compose
